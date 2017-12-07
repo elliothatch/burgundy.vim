@@ -13,7 +13,7 @@ let g:colors_name = "burgundy"
 
 hi Normal guifg=#f2ead7 guibg=#1a0a16 guisp=#1a0a16 gui=NONE ctermfg=230 ctermbg=234 cterm=NONE
 
-hi Cursor guifg=#ffffff guibg=#e6177b guisp=#e6177b gui=NONE ctermfg=15 ctermbg=161 cterm=NONE
+hi Cursor guifg=#1a0a16  guibg=#cfeee2 guisp=#e6177b gui=NONE ctermfg=234  ctermbg=161 cterm=NONE
 hi CursorLine guifg=NONE guibg=#30111d guisp=#30111d gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
 hi CursorColumn guifg=NONE guibg=#30111d guisp=#30111d gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
 
@@ -63,7 +63,7 @@ hi Todo guifg=#ffcfcf guibg=#7d0d05 guisp=#7d0d05 gui=NONE ctermfg=224 ctermbg=3
 
 hi MatchParen guifg=#d6154f guibg=NONE guisp=NONE gui=bold ctermfg=161 ctermbg=NONE cterm=bold
 hi NonText guifg=#4d122a guibg=NONE guisp=NONE gui=NONE ctermfg=52 ctermbg=NONE cterm=NONE
-hi SpecialKey guifg=#ff8e2b guibg=NONE guisp=NONE gui=italic ctermfg=208 ctermbg=NONE cterm=NONE
+hi SpecialKey guifg=#4d122a  guibg=NONE guisp=NONE gui=italic ctermfg=52 ctermbg=NONE cterm=NONE
 
 hi Search guifg=#ffabab guibg=#94352e guisp=#94352e gui=NONE ctermfg=217 ctermbg=88 cterm=NONE
 hi IncSearch guifg=#ffabab guibg=#94352e guisp=#94352e gui=NONE ctermfg=217 ctermbg=88 cterm=NONE
