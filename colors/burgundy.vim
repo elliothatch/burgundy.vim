@@ -111,6 +111,21 @@ hi PMenuThumb guifg=NONE guibg=#4d152b guisp=#4d152b gui=NONE ctermfg=NONE cterm
 
 hi Directory guifg=#f2b600 guibg=NONE guisp=NONE gui=bold ctermfg=214 ctermbg=NONE cterm=bold
 
+hi LspDiagnosticsDefaultError guifg=#d11b2d guibg=#240d19 guisp=NONE gui=NONE ctermfg=160 ctermbg=235 cterm=NONE
+hi LspDiagnosticsSignError guifg=#d11b2d guibg=#240d19 guisp=NONE gui=NONE ctermfg=160 ctermbg=235 cterm=NONE
+
+hi LspDiagnosticsDefaultWarning guifg=#f2b600 guibg=#240d19 guisp=NONE gui=NONE ctermfg=214 ctermbg=235 cterm=none
+hi LspDiagnosticsDefaultHint guifg=#f2b600 guibg=#240d19 guisp=NONE gui=NONE ctermfg=214 ctermbg=235 cterm=none
+hi LspDiagnosticsDefaultInfo guifg=#f2ead7 guibg=#240d19 guisp=#1a0a16 gui=NONE ctermfg=230 ctermbg=235 cterm=NONE
+
+" LSP highligh symbols on hover
+hi LspReferenceRead gui=bold cterm=bold
+" not sure when these two highglight groups are used
+hi LspReferenceWrite gui=bold cterm=bold
+hi LspReferenceText gui=bold cterm=bold
+
+
+
 "hi user1 guifg=#00ff8b guibg=#3e3e5e guisp=#3e3e5e gui=NONE ctermfg=48 ctermbg=60 cterm=NONE
 "hi user2 guifg=#7070a0 guibg=#3e3e5e guisp=#3e3e5e gui=NONE ctermfg=103 ctermbg=60 cterm=NONE
 
