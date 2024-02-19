@@ -56,11 +56,6 @@ hi Debug guifg=#c9265a guibg=NONE guisp=NONE gui=NONE ctermfg=1 ctermbg=NONE cte
 
 hi Underlined guifg=#e3006a guibg=NONE guisp=NONE gui=underline ctermfg=161 ctermbg=NONE cterm=underline
 
-" tree sitter (WIP)
-hi! link @tag.delimiter Delimiter
-hi! link @tag.attribute Special
-hi! link @property Special
-
 "ignore
 hi Error guifg=#ffcfcf guibg=#7d0d05 guisp=#7d0d05 gui=NONE ctermfg=224 ctermbg=3 cterm=NONE
 hi Todo guifg=#f2ead7 guibg=#782963 guisp=#782963 gui=NONE ctermfg=230 ctermbg=89 cterm=NONE
@@ -116,6 +111,39 @@ hi PMenuThumb guifg=NONE guibg=#4d152b guisp=#4d152b gui=NONE ctermfg=NONE cterm
 
 hi Directory guifg=#f2b600 guibg=NONE guisp=NONE gui=bold ctermfg=214 ctermbg=NONE cterm=bold
 
+" tree sitter (WIP)
+hi! link @tag.delimiter Delimiter
+hi! link @tag.attribute Special
+hi! link @property Special
+
+" markdown
+hi! link @markup.heading Title
+hi! link @markup.heading.1.marker Delimiter
+hi! link @markup.heading.2.marker Delimiter
+hi! link @markup.heading.3.marker Delimiter
+hi! link @markup.heading.4.marker Delimiter
+hi! link @markup.heading.5.marker Delimiter
+hi! link @markup.heading.6.marker Delimiter
+
+hi! @markup.strong gui=bold cterm=bold
+hi! @markup.italic gui=italic cterm=italic
+hi! @markup.strikethrough gui=strikethrough cterm=strikethrough
+
+hi! link @markup.quote String " Number
+
+hi! link @markup.list Delimiter
+
+
+hi! link @markup.raw String
+hi! link @markup.raw.block String
+hi! link @markup.raw.delimiter Delimiter " or Special?
+
+hi! link @markup.link Delimiter " [] and () around links
+hi! link @markup.link.label Identifier
+hi! link @markup.link.url @text.uri
+" annoyingly, there is no capture group currently for the <> delimiters of a simple url <https://test.com>. the markdown parser seems to just include the whole thing as the link
+
+" LSP
 hi LspDiagnosticsDefaultError guifg=#d11b2d guibg=#240d19 guisp=NONE gui=NONE ctermfg=160 ctermbg=235 cterm=NONE
 hi LspDiagnosticsSignError guifg=#d11b2d guibg=#240d19 guisp=NONE gui=NONE ctermfg=160 ctermbg=235 cterm=NONE
 
