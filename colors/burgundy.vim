@@ -1,5 +1,5 @@
 " Vim color file - burgundy
-" elliot hatch - 2017
+" elliot hatch - 2024
 set background=dark
 if version > 580
 	hi clear
@@ -143,23 +143,48 @@ hi! link @markup.link.label Identifier
 hi! link @markup.link.url @text.uri
 " annoyingly, there is no capture group currently for the <> delimiters of a simple url <https://test.com>. the markdown parser seems to just include the whole thing as the link
 
-" LSP
-hi LspDiagnosticsDefaultError guifg=#d11b2d guibg=#240d19 guisp=NONE gui=NONE ctermfg=160 ctermbg=235 cterm=NONE
-hi LspDiagnosticsSignError guifg=#d11b2d guibg=#240d19 guisp=NONE gui=NONE ctermfg=160 ctermbg=235 cterm=NONE
+" Overrides to make treesitter typescript highlighting better
+" In the future should rethink the default color associations, since their usage has changed quite a lot
+" e.g. (Identifier and Keyword shouldn't be the same)
+"hi! link @keyword Special
+"hi! link @keyword.conditional Conditional
+"hi! link @keyword.exception Conditional
+"hi! link @keyword.modifier Identifier
+"hi! link @variable Identifier
+"
+"hi! link @lsp.type.property.typescript Identifier
+"hi! link @lsp.typemod.property.declaration.typescript Normal
+"
+"hi! link @lsp.typemod.interface.declaration.typescript Function
+"hi! link @lsp.typemod.class.declaration.typescript Function
 
-hi LspDiagnosticsDefaultWarning guifg=#f2b600 guibg=#240d19 guisp=NONE gui=NONE ctermfg=214 ctermbg=235 cterm=none
-hi LspDiagnosticsDefaultHint guifg=#f2b600 guibg=#240d19 guisp=NONE gui=NONE ctermfg=214 ctermbg=235 cterm=none
-hi LspDiagnosticsDefaultInfo guifg=#f2ead7 guibg=#240d19 guisp=#1a0a16 gui=NONE ctermfg=230 ctermbg=235 cterm=NONE
+hi! link @keyword.conditional Conditional
+hi! link @keyword.exception Conditional
+hi! link @keyword.modifier Identifier
+hi! link @variable Normal
 
-" LSP highligh symbols on hover
+hi! link @lsp.type.property.javascript Normal
+hi! link @lsp.type.property.typescript Normal
+hi! link @lsp.typemod.property.declaration.typescript Normal
+
+hi! link @lsp.typemod.interface.declaration.typescript Function
+hi! link @lsp.typemod.class.declaration.typescript Function
+
+
+" LSP popups
+hi! DiagnosticError guifg=#d11b2d guibg=#240d19 guisp=NONE gui=NONE ctermfg=160 ctermbg=235 cterm=NONE
+hi! DiagnosticWarning guifg=#f2b600 guibg=#240d19 guisp=NONE gui=NONE ctermfg=214 ctermbg=235 cterm=NONE
+hi! DiagnosticHint guifg=#f2ead7 guibg=#240d19 guisp=#1a0a16 gui=NONE ctermfg=230 ctermbg=235 cterm=NONE
+hi! DiagnosticInfo guifg=#f2ead7 guibg=#240d19 guisp=#1a0a16 gui=NONE ctermfg=230 ctermbg=235 cterm=NONE
+
+hi! DiagnosticUnderlineError   guisp=#d11b2d gui=underline cterm=underline
+hi! DiagnosticUnderlineWarning guisp=#f2b600 gui=underline cterm=underline
+hi! DiagnosticUnderlineHint    guisp=#f2ead7 gui=underline cterm=underline
+hi! DiagnosticUnderlineInfo    guisp=#f2ead7 gui=underline cterm=underline
+
+
+" LSP highlight symbols on hover
 hi LspReferenceRead gui=bold cterm=bold
 " not sure when these two highglight groups are used
 hi LspReferenceWrite gui=bold cterm=bold
 hi LspReferenceText gui=bold cterm=bold
-
-
-
-"hi user1 guifg=#00ff8b guibg=#3e3e5e guisp=#3e3e5e gui=NONE ctermfg=48 ctermbg=60 cterm=NONE
-"hi user2 guifg=#7070a0 guibg=#3e3e5e guisp=#3e3e5e gui=NONE ctermfg=103 ctermbg=60 cterm=NONE
-
-"hi lcursor guifg=#404040 guibg=#8fff8b guisp=#8fff8b gui=NONE ctermfg=238 ctermbg=120 cterm=NONE
