@@ -111,6 +111,10 @@ hi PMenuThumb guifg=NONE guibg=#4d152b guisp=#4d152b gui=NONE ctermfg=NONE cterm
 
 hi Directory guifg=#f2b600 guibg=NONE guisp=NONE gui=bold ctermfg=214 ctermbg=NONE cterm=bold
 
+" LSP
+hi link TSProperty Normal
+hi link TSParameter Normal
+
 " tree sitter (WIP)
 hi! link @tag.delimiter Delimiter
 hi! link @tag.attribute Special
